@@ -1,63 +1,59 @@
-.DS_STORE
+# NPM Packages
+node_modules/
+package-lock.json
 
-/dist/
-/bazel-out
-/integration/bazel/bazel-*
-*.log
-/node_modules/
+# Compiled output
+dist/
+tmp/
+out-tsc/
+build/
 
-# CircleCI temporary file for cache key computation.
-# See `save_month_to_file` in `.circleci/config.yml`.
-month.txt
+# System Files
+.DS_Store
+Thumbs.db
+ehthumbs.db
+Desktop.ini
 
-# Include when developing application packages.
-pubspec.lock
-.c9
+# Logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+lerna-debug.log*
+
+# IDEs and editors
 .idea/
-.devcontainer/*
-!.devcontainer/README.md
-!.devcontainer/recommended-devcontainer.json
-!.devcontainer/recommended-Dockerfile
-.settings/
-.vscode/launch.json
-.vscode/settings.json
-.vscode/tasks.json
-*.swo
-*.swp
-modules/.settings
-modules/.vscode
-.vimrc
-.nvimrc
+.vscode/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
 
-# Don't check in secret files
-*secret.js
+# Coverage
+coverage/
+*.lcov
 
-# Ignore npm/yarn debug log
-npm-debug.log
-yarn-error.log
-
-# build-analytics
-.build-analytics
-
-# rollup-test output
-/modules/rollup-test/dist/
-
-# User specific bazel settings
-.bazelrc.user
-
-# User specific ng-dev settings
-.ng-dev.user*
-
-.notes.md
-baseline.json
-
-# Ignore .history for the xyz.local-history VSCode extension
-.history
-
-# Husky
-.husky/_
-aio/content/examples/.DS_Store
-
-
-# Ignore cache created with the Angular CLI.
+# Angular specific
 .angular/
+.angular/cache
+.angular/config.json
+
+# Compiled files
+*.map
+*.js
+*.d.ts
+*.tsbuildinfo
+
+# Service worker
+ngsw-worker.js
+ngsw.json
+safety-worker.js
+safety-worker.js.map
+worker-basic.min.js
+worker-basic.min.js.map
+
+# Mac system files
+*.DS_Store
+
+# Windows system files
+Thumbs.db
