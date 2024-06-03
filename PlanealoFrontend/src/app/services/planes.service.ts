@@ -19,7 +19,7 @@ export class PlanesService implements Dao<Plan, string>{
   delete(k: string): Observable<Boolean> {
     throw new Error('Method not implemented.');
   }
-  getByID(k: string): Observable<Plan[]> {
+  getByReferencia(k: string): Observable<Plan | null> {
     throw new Error('Method not implemented.');
   }
   update(t: Plan): Observable<Plan | null> {

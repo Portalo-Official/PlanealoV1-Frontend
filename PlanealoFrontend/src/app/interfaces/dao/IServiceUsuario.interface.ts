@@ -1,21 +1,13 @@
 import { Observable } from 'rxjs';
+import { Dao } from './dao.interface';
 
 /**
  * @generic T es la clase principal que se obtiene de las peticiones
  * @generic K es el tipo de dato por el que se identifique el genérico T
  */
-export interface Dao<T, K>{
+export interface IServiceUsuario<T, K> extends Dao<T, K>{
   // Array del generico T opcional
   list? : Array<T>;
-
-  getAll(): Observable<Array<T>>;
-
-  delete(k: K): Observable<Boolean>;
-
-  getByReferencia(k : K): Observable<T | null>;
-
-  update(t : T): Observable<T | null>;
-
-  create(t: T): Observable<T | null>;
+  login(): Observable<Array<T>>;
 
 }
