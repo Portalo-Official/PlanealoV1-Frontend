@@ -1,5 +1,4 @@
 <div class="container">
-    <div class="row">
         <!-- ?CARD -->
         <div class="col-lg-4">
             <div class="card card-margin">
@@ -16,7 +15,9 @@
                             </div>
                             <!-- !TITULO -->
                             <div class="widget-49-meeting-info">
-                                <span class="widget-49-pro-title">{{plan.titulo || 'Titulo Place'}} PRO-08235 DeskOpe. Website</span>
+                                <span class="widget-49-pro-title">
+                                    {{plan.titulo}}
+                                </span>
                                 <span class="widget-49-meeting-time">12:00 to 13.30 Hrs</span>
                             </div>
                         </div>
@@ -27,7 +28,7 @@
                         </ol>
                         <div class="widget-49-meeting-action">
                             <a
-                             routerLink="/plan/{{plan.referencia}}"; 
+                             [routerLink]="'/plan/'+plan.referencia" 
                              class="btn btn-sm btn-flash-border-primary">View All</a>
                         </div>
                     </div>
@@ -93,5 +94,4 @@
                 </div>
             </div>
         </div> -->
-    </div>
     </div>
