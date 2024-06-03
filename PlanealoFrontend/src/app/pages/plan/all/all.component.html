@@ -1,7 +1,11 @@
 <div class="container-fluid h-100 d-flex flex-column  paleta-secundario">
+    <hr>
+    <hr>
+    <div class="grid overflow-hidden min-w-min p-2">
 
-    <p>All plans</p>
-    <p>All plans</p>
-    <p>All plans</p>
-
+        <div class="col sm:col-5  md:col-4 xl:col-2 "
+        *ngFor="let plan of planes">
+            <app-card-plan [plan]="plan"></app-card-plan>
+        </div>
+    </div>
 </div>

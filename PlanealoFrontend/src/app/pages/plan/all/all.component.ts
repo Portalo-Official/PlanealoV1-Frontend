@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
+import { Plan } from 'src/app/interfaces/Plan';
 import { PlanesService } from 'src/app/services/planes.service';
+
 
 @Component({
   selector: 'app-all',
@@ -8,13 +10,14 @@ import { PlanesService } from 'src/app/services/planes.service';
 })
 export class AllComponent {
 
+  planes : Plan[] = [];
 
   constructor(private planesService : PlanesService) { }
 
   ngOnInit(): void {
-    this.planesService.getAll().subscribe(data => {
-      console.log(data);
-    })
+    // this.planesService.getAll().subscribe(data => {
+    //   console.log(data);
+    // })
   }
 
 
