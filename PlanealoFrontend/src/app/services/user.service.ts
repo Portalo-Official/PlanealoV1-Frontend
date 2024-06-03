@@ -10,6 +10,7 @@ import { Injectable } from '@angular/core';
   providedIn: 'root'
 })
 export class UsuarioService implements IServiceUsuario<Usuario, string>{
+  userlogin?: Usuario;
 
   list?: Usuario[] | undefined;
   private baseURL: string = environmets.baseUrl;
@@ -17,11 +18,11 @@ export class UsuarioService implements IServiceUsuario<Usuario, string>{
 
   constructor(private http: HttpClient) { }
 
-  login(): Observable<Usuario[]> {
+  login(): Observable<Usuario | null> {
 
-    return this.http.get<Usuario[]>(`${this.baseURL}${this.endpoint}/login`)
+    return this.http.get<Usuario>(`${this.baseURL}${this.endpoint}/login`)
                     .pipe(
-                      catchError(() => of([]))
+                      catchError(() => of(null))
                     );
   }
   getAll(): Observable<Usuario[]> {

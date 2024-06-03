@@ -9,9 +9,9 @@ import { Router } from '@angular/router';
 })
 export class LoginComponent implements OnInit{
   
-  loginForm= this.formBuilder.group({
-    email: ['santi@harnina.com', [Validators.required, Validators.email]],
-    password: ['S12345', Validators.required]
+  loginForm = this.formBuilder.group({
+    email: ['', [Validators.required, Validators.email]],
+    password: ['', [Validators.required, Validators.minLength(6)]]
   });
 
   constructor(
@@ -30,8 +30,17 @@ export class LoginComponent implements OnInit{
       this.router.navigate(['/home']);
       this.loginForm.reset();
     }else{
+      this.loginForm.markAllAsTouched();
       alert("Formulario no válido");
     }
+  }
+
+  get email() {
+    return this.loginForm.get('email');
+  }
+  
+  get password() {
+    return this.loginForm.get('password');
   }
 
 }

@@ -1,4 +1,10 @@
 /* You can add global styles to this file, and also import other style files */
+
+body {
+    height: 100vh;
+
+}
+
 .paleta-primario{
     background-color: #212A31 !important;
    
@@ -33,16 +39,19 @@
 .texto-cinco{
     color: #D3D9D4 !important;
 }
+/* * NAVEGACION */
 .text-navegacion:hover{
     color:#d6d6d6;
     /* font-weight: 600; */
 }
-
-
-body {
-    height: 100vh;
-
-}
-/* .salir:hover{
+.salir:hover{
     color: red;
-} */
+}
+
+/* * FORMULARIOS */
+.ng-valid:not(form).ng-touched {
+    border-left: 6px solid #28a745;
+}
+.ng-invalid:not(form).ng-touched {
+    border-left: 6px solid #dc3545;
+}

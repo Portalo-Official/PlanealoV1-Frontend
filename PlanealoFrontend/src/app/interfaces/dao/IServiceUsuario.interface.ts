@@ -8,6 +8,6 @@ import { Dao } from './dao.interface';
 export interface IServiceUsuario<T, K> extends Dao<T, K>{
   // Array del generico T opcional
   list? : Array<T>;
-  login(): Observable<Array<T>>;
+  login(): Observable<T | null>;
 
 }
