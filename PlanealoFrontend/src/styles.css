@@ -1,8 +1,10 @@
 /* You can add global styles to this file, and also import other style files */
-
+:root{
+    background-color: #2E3944;
+}
 body {
-    height: 100vh;
-
+    /* height: 100vh; */
+    background-color: #2E3944;
 }
 
 .paleta-primario{
@@ -55,3 +57,31 @@ body {
 .ng-invalid:not(form).ng-touched {
     border-left: 6px solid #dc3545;
 }
+
+/* * CARDS */
+.card-plan {
+    /* Estilo base */
+    width: 100%;
+    max-width: 100%;
+  
+    margin-bottom: 1rem;
+  }
+  
+  
+  @media (min-width: 768px) { /* md */
+    .card-plan {
+      width: 10rem; 
+    }
+  }
+  
+  @media (min-width: 1024px) { /* lg */
+    .card-plan {
+      width: 25rem;
+    }
+  }
+  
+  @media (min-width: 1280px) { /* xl */
+    .card-plan {
+      width: 20rem; 
+    }
+  }
