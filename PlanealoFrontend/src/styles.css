@@ -1,15 +1,41 @@
 /* You can add global styles to this file, and also import other style files */
 .paleta-primario{
-    background-color: #b76fc0 !important;
+    background-color: #212A31 !important;
    
 }
 .paleta-secundario{
-    background-color: #7fd9b7 !important;
+    background-color: #2E3944 !important;
    
 }
-.paleta-teciario{
-    background-color: #c4ca6e !important;
+.paleta-terciario{
+    background-color: #124E66 !important;
    
+}
+.paleta-cuaternario{
+    background-color: #748D92 !important;
+   
+}
+.paleta-quintenario{
+    background-color: #D3D9D4 !important;
+   
+}
+
+.texto-secundario{
+    color: #384553 !important;
+    /* color: #2E3944 !important; */
+}
+.texto-terciario{
+    color: #124E66 !important;
+}
+.texto-cuatro{
+    color: #748D92 !important;
+}
+.texto-cinco{
+    color: #D3D9D4 !important;
+}
+.text-navegacion:hover{
+    color:#d6d6d6;
+    /* font-weight: 600; */
 }
 
 

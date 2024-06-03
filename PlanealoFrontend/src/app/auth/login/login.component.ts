@@ -26,7 +26,7 @@ export class LoginComponent implements OnInit{
   login(){
     if(this.loginForm.valid){
       console.log(this.loginForm.value);
-      
+      this.router.navigate(['/home']);
     }else{
       alert("Formulario no válido");
     }

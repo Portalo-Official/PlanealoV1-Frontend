@@ -1,15 +1,15 @@
-<div class="paleta-primario container-fluid h-100 w-100 flex-column  align-content-start p-5 justify-content-center">
+<div class="paleta-secundario container-fluid h-100 w-100 flex-column  align-content-start p-5 justify-content-center">
 
-    <form class="shadow-lg w-75 h-auto rounded center paleta-secundario p-4 ms-5 align-self-lg-center"
+    <form class="paleta-terciario shadow-lg w-75 h-auto rounded center  p-4 ms-5 align-self-lg-center"
         [formGroup]="loginForm">
         <div class="mb-3 ">
-          <label for="exampleInputEmail1" class="form-label text-gray-900  fw-bold">Email address</label>
+          <label for="exampleInputEmail1" class="form-label texto-cinco  fw-bold">Email address</label>
           <input formControlName="email" 
                  type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
           <!-- <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div> -->
         </div>
         <div class="mb-3">
-          <label for="exampleInputPassword1" class="form-label text-gray-900 fw-bold">Password</label>
+          <label for="exampleInputPassword1" class="form-label texto-cinco fw-bold">Password</label>
           <input formControlName="password" 
                  type="password" class="form-control" id="exampleInputPassword1">
         </div>
@@ -19,7 +19,7 @@
         </div> -->
         <button type="submit" 
                 (click)="login()"
-                class="btn  paleta-teciario text-white fw-bold">Iniciar Sesión</button>
+                class="btn  paleta-teciario paleta-cuaternario texto-cinco fw-bold">Iniciar Sesión</button>
     </form>
 
 </div>
