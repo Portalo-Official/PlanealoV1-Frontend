@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {FormBuilder, Validators} from '@angular/forms';
 import { Router } from '@angular/router';
+import { LoginPlanealoService } from 'src/app/services/login.service';
 
 @Component({
   selector: 'app-login',
@@ -16,7 +17,8 @@ export class LoginComponent implements OnInit{
 
   constructor(
               private formBuilder: FormBuilder,
-              private router:Router
+              private router:Router,
+              private loginService: LoginPlanealoService
             ) { }  
   
   ngOnInit(): void {
@@ -25,10 +27,17 @@ export class LoginComponent implements OnInit{
 
   login(){
     if(this.loginForm.valid){
-      console.log(this.loginForm.value);
-      // this.router.navigate(['/plan/user']);
-      this.router.navigate(['/home']);
-      this.loginForm.reset();
+      this.loginService.login(this.email!.value!, this.password!.value!).subscribe(
+        (user) => {
+          if(user){
+            console.log(user);
+            this.router.navigate(['/home']);
+          }else{
+            alert("Usuario no encontrado");
+          }
+        }
+        );     
+    
     }else{
       this.loginForm.markAllAsTouched();
       alert("Formulario no válido");

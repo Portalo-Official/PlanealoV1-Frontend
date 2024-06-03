@@ -3,14 +3,14 @@ import { environmets } from './../environments/environments.dev';
 import { Observable, catchError, of } from 'rxjs';
 import { HttpClient } from '@angular/common/http';
 import { Usuario } from '../interfaces/Usuario';
-import { IServiceUsuario } from '../interfaces/dao/IServiceUsuario.interface';
 import { Injectable } from '@angular/core';
+import { Dao } from '../interfaces/dao/dao.interface';
 
 @Injectable({
   providedIn: 'root'
 })
-export class UsuarioService implements IServiceUsuario<Usuario, string>{
-  userlogin?: Usuario;
+export class UsuarioService implements Dao<Usuario, string>{
+ 
 
   list?: Usuario[] | undefined;
   private baseURL: string = environmets.baseUrl;
@@ -18,13 +18,7 @@ export class UsuarioService implements IServiceUsuario<Usuario, string>{
 
   constructor(private http: HttpClient) { }
 
-  login(): Observable<Usuario | null> {
-
-    return this.http.get<Usuario>(`${this.baseURL}${this.endpoint}/login`)
-                    .pipe(
-                      catchError(() => of(null))
-                    );
-  }
+ 
   getAll(): Observable<Usuario[]> {
     
     return this.http.get<Usuario[]>(`${this.baseURL}${this.endpoint}/all`)
