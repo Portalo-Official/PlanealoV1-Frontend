@@ -3,37 +3,51 @@
         <div class="col-lg-4">
             <div class="card card-margin">
                 <div class="card-header no-border">
-                    <h5 class="card-title">MOM</h5>
+                    <!-- ! Modod -->
+                    <h5 class="card-title">
+                        {{planFormateado?.modo || '-'}}
+                    </h5>
                 </div>
                 <div class="card-body pt-0">
                     <div class="widget-49">
                         <div class="widget-49-title-wrapper">
                             <!-- !FECHA -->
                             <div class="widget-49-date-primary">
-                                <span class="widget-49-date-day">09</span>
-                                <span class="widget-49-date-month">apr</span>
+                                <span class="widget-49-date-day">
+                                    {{planFormateado?.fechaCreacion?.day || '-'}} 
+                                </span>
+                                <span class="widget-49-date-month">
+                                    {{planFormateado?.fechaCreacion!.monthName ||'-'}}
+                                </span>
                             </div>
                             <!-- !TITULO -->
                             <div class="widget-49-meeting-info">
                                 <span class="widget-49-pro-title">
                                     {{plan.titulo}}
                                 </span>
-                                <span class="widget-49-meeting-time">12:00 to 13.30 Hrs</span>
+                                <!-- ! Fecha Fin -->
+                                <span class="widget-49-meeting-time">
+                                    {{planFormateado?.fechaFin?.day || '-'}} 
+                                    {{planFormateado?.fechaFin?.monthName || '-'}}
+                                </span>
                             </div>
                         </div>
+                        <!-- !DESCRIPCION -->
                        <div class="widget-49-date-primary">
-                        <p>{{plan.descripcion || ''}} </p>
+                        <p>{{plan.descripcion | truncate:80 ||''}} </p>
                        </div>
                         <div class="widget-49-meeting-action">
                             <a
                              [routerLink]="'/plan/'+plan.referencia" 
-                             class="btn btn-sm btn-flash-border-primary">View All</a>
+                             class="btn btn-sm btn-flash-border-primary">Ver Plan</a>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-        <!--! Card -->
+    </div>
+
+      <!--! Card -->
         <!-- <div class="col-lg-4">
             <div class="card card-margin">
                 <div class="card-header no-border">
@@ -92,4 +106,3 @@
                 </div>
             </div>
         </div> -->
-    </div>

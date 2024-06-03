@@ -9,19 +9,18 @@ import { NavbarComponent } from './shared/navbar/navbar.component';
 import { PlanModule } from './pages/plan/plan.module';
 import { LoginComponent } from './auth/login/login.component';
 import { ReactiveFormsModule } from '@angular/forms';
+import { TruncatePipe } from './pipe/truncate.pipe';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
     NavbarComponent,
-    
     LoginComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    PlanModule,
     HttpClientModule,
     ReactiveFormsModule
   ],

@@ -1,19 +1,15 @@
 <div class="container-fluid h-100 d-flex flex-column  paleta-secundario">
     <hr>
     <hr>
-
-    <!-- <div *ngFor="let plan of planes">
-        <div class="card" [attr.data-id]="plan.referencia">
-          <h2>{{ plan.titulo }}</h2>
-          <p>{{ plan.descripcion }}</p>
-          <p>Fecha de Creación: {{ plan.fechaCreacion }}</p>
-          <p>Fecha de Fin: {{ plan.fechaFin }}</p>
-          <p>Ubicación: {{ plan.ubicacionLatitud }}, {{ plan.ubicacionAltitud }}</p>
-          <p>Modo: {{ plan.modo }}</p>
+    
+      <!-- <div class="grid overflow-hidden min-w-min p-2">
+        <div class="col sm:col-5  md:col-4 xl:col-2 "
+        *ngFor="let plan of planes">
+            <app-card-plan [plan]="plan"></app-card-plan>
         </div>
-      </div> -->
-      
-    <div class="grid overflow-hidden min-w-min p-2">
+    </div> -->
+
+    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-4 p-4">
         <div class="col sm:col-5  md:col-4 xl:col-2 "
         *ngFor="let plan of planes">
             <app-card-plan [plan]="plan"></app-card-plan>

@@ -2,6 +2,21 @@ import { format, parseISO } from 'date-fns';
 import { Plan } from 'src/app/interfaces/Plan';
 import { FormattedPlan, FormattedDate } from 'src/app/interfaces/PlanFormat';
 
+const mappertMeses: { [key: string]: string } = {
+  'January': 'ENE',
+  'February': 'FEB',
+  'March': 'MAR',
+  'April': 'ABR',
+  'May': 'MAY',
+  'June': 'JUN',
+  'July': 'JUL',
+  'August': 'AGO',
+  'September': 'SEP',
+  'October': 'OCT',
+  'November': 'NOV',
+  'December': 'DIC'
+};
+
 export class DateUtils {
   
   /**
@@ -15,7 +30,7 @@ export class DateUtils {
     const time = format(parsedDate, 'HH:mm'); // Formato de 24 horas
     const dayMonth = format(parsedDate, 'dd-MM');
     const day = format(parsedDate, 'dd');
-    const monthName = format(parsedDate, 'MMMM');
+    const monthName = mappertMeses[format(parsedDate, 'MMMM')] || format(parsedDate, 'MMMM');
     return { time, dayMonth, day, monthName };
   }
 
@@ -36,5 +51,7 @@ export class DateUtils {
       modo: plan.modo
     };
   }
+
+
 }
 
