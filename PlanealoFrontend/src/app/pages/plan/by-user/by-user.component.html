@@ -1,6 +1,22 @@
 <div class="container-fluid h-100 d-flex flex-column  paleta-secundario">
+    <hr>
+    <h1 class="texto-cinco text-center">Planes de {{userLoginData?.nombre}}}</h1>
+    <hr>
+    
+      <!-- <div class="grid overflow-hidden min-w-min p-2">
+        <div class="col sm:col-5  md:col-4 xl:col-2 "
+        *ngFor="let plan of planes">
+            <app-card-plan [plan]="plan"></app-card-plan>
+        </div>
+    </div> -->
 
-    <p class="texto-cinco">My plans</p>
-
-
+<div class="row p-5">
+    <div class="col-lg-9">
+      <div class="row">
+          <div class="col-lg-3"  
+          *ngFor="let plan of planes">
+            <app-card-plan [plan]="plan" class="col-sm-6 col-lg-2"></app-card-plan>
+        </div>
+      </div>
+    </div>
 </div>
