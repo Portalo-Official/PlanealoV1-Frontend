@@ -11,8 +11,8 @@ import { LoginPlanealoService } from 'src/app/services/login.service';
 export class LoginComponent implements OnInit{
   
   loginForm = this.formBuilder.group({
-    email: ['', [Validators.required, Validators.email]],
-    password: ['', [Validators.required, Validators.minLength(6)]]
+    email: ['harnina@harnina.com', [Validators.required, Validators.email]],
+    password: ['H12345', [Validators.required, Validators.minLength(6)]]
   });
 
   constructor(

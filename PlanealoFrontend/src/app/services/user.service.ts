@@ -27,26 +27,26 @@ export class UsuarioService implements Dao<Usuario, string>{
                     );
   }
   delete(k: string): Observable<Boolean> {
-    return this.http.delete<Boolean>(`${this.baseURL}/${this.endpoint}`, {body:{id:k}})
+    return this.http.delete<Boolean>(`${this.baseURL}${this.endpoint}`, {body:{id:k}})
     .pipe(
       catchError( () => of(false))
     );
   }
   
   getByReferencia(k: string): Observable<Usuario | null> {
-    return this.http.get<Usuario | null>(`${this.baseURL}/${this.endpoint}/${k}`)
+    return this.http.get<Usuario | null>(`${this.baseURL}${this.endpoint}/${k}`)
     .pipe(
       catchError( () => of(null))
     );
   }
   update(t: Usuario): Observable<Usuario | null> {
-    return this.http.put<Usuario>(`${this.baseURL}/${this.endpoint}/${t.ref}`, {t})
+    return this.http.put<Usuario>(`${this.baseURL}${this.endpoint}/${t.ref}`, {t})
     .pipe(
       catchError( () => of(null))
     );
   }
   create(t: Usuario): Observable<Usuario | null> {
-    return this.http.post<Usuario>(`${this.baseURL}/${this.endpoint}`, {t})
+    return this.http.post<Usuario>(`${this.baseURL}${this.endpoint}`, {t})
     .pipe(
       catchError( () => of(null))
     );

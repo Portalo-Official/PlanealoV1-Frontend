@@ -1,4 +1,9 @@
-import { Usuario } from "./Usuario";
+
+export interface Miembros{
+    ref: string;
+    nombre: string;
+    rol: string;
+}
 
 export interface Plan {
     referencia: string;
@@ -9,5 +14,5 @@ export interface Plan {
     ubicacionAltitud: number | null;
     descripcion: string;
     modo: string;
-    usuarios?: Usuario[];
+    miembros?: Miembros[];
 }

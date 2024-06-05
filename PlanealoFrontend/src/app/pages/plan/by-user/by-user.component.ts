@@ -17,14 +17,16 @@ export class ByUserComponent {
                ) { }
 
   ngOnInit(): void {
-    this.planesService.getAll().subscribe(data => {
-      console.log(data);
-      
-      this.planes = data;
-    })
+    
     this.loginService.currentUserData.subscribe( (userData) => {
       this.userLoginData = userData;
     });
+    
+    this.planesService.getAllByUsuario(this.userLoginData?.ref!).subscribe(data => {
+      if(data){
+        this.planes = data;
+      }      
+    })
   }
 
 }

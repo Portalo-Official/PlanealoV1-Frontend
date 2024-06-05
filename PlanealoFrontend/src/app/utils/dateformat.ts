@@ -48,7 +48,8 @@ export class DateUtils {
       ubicacionLatitud: plan.ubicacionLatitud,
       ubicacionAltitud: plan.ubicacionAltitud,
       descripcion: plan.descripcion,
-      modo: plan.modo
+      modo: plan.modo,
+      miembros: plan.miembros,
     };
   }
 

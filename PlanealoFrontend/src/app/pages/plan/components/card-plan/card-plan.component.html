@@ -6,7 +6,8 @@
                 <div class="card-header no-border">
                     <!-- ! Modod -->
                     <h5 class="card-title">
-                        {{planFormateado?.modo || '-'}}
+                        <!-- {{planFormateado?.modo || plan.modo}} -->
+                        {{ plan.modo}}
                     </h5>
                 </div>
                 <div class="card-body pt-0">
@@ -15,10 +16,10 @@
                             <!-- !FECHA -->
                             <div class="widget-49-date-primary">
                                 <span class="widget-49-date-day">
-                                    {{planFormateado?.fechaCreacion?.day || '-'}} 
+                                    <!-- {{planFormateado?.fechaCreacion?.day || ''}}  -->
                                 </span>
                                 <span class="widget-49-date-month">
-                                    {{planFormateado?.fechaCreacion!.monthName ||'-'}}
+                                    <!-- {{planFormateado?.fechaCreacion!.monthName ||''}} -->
                                 </span>
                             </div>
                             <!-- !TITULO -->
@@ -28,8 +29,8 @@
                                 </span>
                                 <!-- ! Fecha Fin -->
                                 <span class="widget-49-meeting-time">
-                                    {{planFormateado?.fechaFin?.day || '-'}} 
-                                    {{planFormateado?.fechaFin?.monthName || '-'}}
+                                    {{planFormateado?.fechaFin?.day || plan.referencia}} 
+                                    {{planFormateado?.fechaFin?.monthName || ''}}
                                 </span>
                             </div>
                         </div>

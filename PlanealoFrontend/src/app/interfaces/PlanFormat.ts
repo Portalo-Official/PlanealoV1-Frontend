@@ -1,3 +1,5 @@
+import { Miembros } from './Plan';
+
 export interface FormattedDate {
     time: string;
     dayMonth: string;
@@ -14,4 +16,5 @@ export interface FormattedPlan {
     ubicacionAltitud: number | null;
     descripcion: string;
     modo: string;
+    miembros?: Miembros[];
   }

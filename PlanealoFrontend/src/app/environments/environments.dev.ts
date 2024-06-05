@@ -1,9 +1,9 @@
 // Endpoint de la API.
 export const environmets = {
-  baseUrl: 'https://localhost:8080/api/v1',
+  baseUrl: 'http://localhost',
   endPoint: {
-    customers: '/customers',
-    planes:'/planes',
-    miembros:'/miembros',
+    customers: ':4001/customers',
+    planes:':4002/planes',
+    miembros:':4002/miembros',
   }
 }

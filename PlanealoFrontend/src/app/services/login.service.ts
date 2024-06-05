@@ -17,7 +17,7 @@ export class LoginPlanealoService implements LoginInterface<Usuario>{
     currentUserData: BehaviorSubject<Usuario> = new BehaviorSubject<Usuario>({} as Usuario);
 
     private baseURL : string = environmets.baseUrl;
-    private endPoint : string = environmets.endPoint.planes;
+    private endPoint : string = environmets.endPoint.customers;
 
     constructor(
                 private http: HttpClient
@@ -25,7 +25,7 @@ export class LoginPlanealoService implements LoginInterface<Usuario>{
 
     login(email : string , password : string): Observable<Usuario | null> {
 
-        return this.http.post<Usuario>(`${this.baseURL}${this.endPoint}/login`, {email, password})
+        return this.http.post<Usuario>(`${this.baseURL}${this.endPoint}/login`, {email, pass:password})
                         .pipe(
                           tap((user) => {
                             if(user){
